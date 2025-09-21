@@ -23,8 +23,7 @@ public class JWTUtils {
     @PostConstruct
     public void init() {
         // Пример строки, которую можно заменить на значение из конфигурации
-        String secretString = "12345!";
-        this.secretKey = Keys.hmacShaKeyFor(secretString.getBytes());
+        this.secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS256);
     }
 
     // Генерация токена на основе UserDetails

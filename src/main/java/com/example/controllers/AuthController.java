@@ -28,7 +28,7 @@ public class AuthController {
     private final LoginService loginAttemptService;
 
     @PostMapping
-    public ResponseEntity<?> login(@RequestBody AuthRequest authRequest) {
+    public ResponseEntity<String> login(@RequestBody AuthRequest authRequest) {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(

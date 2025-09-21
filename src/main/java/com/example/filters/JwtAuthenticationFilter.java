@@ -1,5 +1,6 @@
 package com.example.filters;
 
+
 import com.example.config.JWTUtils;
 import com.example.services.UserService;
 import jakarta.servlet.FilterChain;
@@ -40,7 +41,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         }
 
         // Извлечение токена из заголовка
-        final String jwtToken = authHeader.substring(7);
+        final String jwtToken = authHeader.substring("Bearer ".length());
 
         // Извлечение имени пользователя из JWT токена
         final String username = jwtUtils.extractUsername(jwtToken);

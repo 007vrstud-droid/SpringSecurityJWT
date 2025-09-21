@@ -20,15 +20,11 @@ public class LoginService {
             if (newFailCount >= MAX_FAILED_ATTEMPTS) {
                 user.setAccountNonLocked(false);
             }
-            userRepository.save(user);
         });
     }
 
     @Transactional
     public void loginSucceeded(String username) {
-        userRepository.findByUsername(username).ifPresent(user -> {
-            user.setFailedAttempts(0);
-            userRepository.save(user);
-        });
+        userRepository.findByUsername(username).ifPresent(user -> user.setFailedAttempts(0));
     }
 }

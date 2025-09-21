@@ -13,9 +13,3 @@ databaseChangeLog:
                       failed_attempts INT DEFAULT 0
                     );
                     
-                    INSERT INTO users (username, password, role, is_account_non_locked, failed_attempts) VALUES
-                    ('admin', '$2a$10$7Q4YBqR2cZwwI6zZxqZq8O7PbXGKi7wU1p5MjrnESJGyQKS.zO27q', 'SUPER_ADMIN', true, 0),
-                    ('moderator', '$2a$10$7Q4YBqR2cZwwI6zZxqZq8O7PbXGKi7wU1p5MjrnESJGyQKS.zO27q', 'MODERATOR', true, 0),
-                    ('user1', '$2a$10$7Q4YBqR2cZwwI6zZxqZq8O7PbXGKi7wU1p5MjrnESJGyQKS.zO27q', 'USER', true, 0),
-                    ('user2', '$2a$10$7Q4YBqR2cZwwI6zZxqZq8O7PbXGKi7wU1p5MjrnESJGyQKS.zO27q', 'USER', true, 0),
-                    ('guest', '$2a$10$7Q4YBqR2cZwwI6zZxqZq8O7PbXGKi7wU1p5MjrnESJGyQKS.zO27q', 'USER', true, 0);

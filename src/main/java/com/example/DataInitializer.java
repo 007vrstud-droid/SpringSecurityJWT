@@ -20,7 +20,7 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
- //      userRepository.deleteAll();
+        //      userRepository.deleteAll();
 
         if (userRepository.count() == 0) {
             List<AppUser> users=new ArrayList<>();

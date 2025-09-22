@@ -29,6 +29,7 @@ spring:
         generate_statistics: true
     open-in-view: false
 
+
 server:
   ssl:
     enabled: true
